@@ -87,11 +87,18 @@
                 <th>Area</th>
                 <th>Location</th>
                 <th>Open days</th>
+                <th>Services</th>
                 <th>Booking Charges</th>
                 <th>Booking Contact</th>
-                <th>Image</th>
+                
               </tr>
             </thead>
+            <tbody>
+              <tr>
+                <?php include 'MybuisnessAction.php' ?>
+              </tr>
+              
+            </tbody>
             
           </table>
         </div>

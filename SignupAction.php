@@ -13,12 +13,12 @@ if(isset($_POST['signup']))
 	if($insert)
 	{
 		$_SESSION['msg'] = 'Sign Up Successfully';
-		header("location:login.html");
+		header("location:login.php");
 	}
 	else
 	{
 		$_SESSION['msg'] = 'Error in Sign Up due to reason > '.mysqli_error($con);
-		header("location:register.html");
+		header("location:signup.php");
 	}
 
 }

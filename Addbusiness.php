@@ -75,7 +75,7 @@
       </ul>
 
     </nav>
-
+    <!-- Side bar Including -->
     <?php include 'sidebar.php'  ?>
       <div id="content-wrapper">
         <div class="container">
@@ -90,12 +90,13 @@
           <div class="row">
             <div class="col-lg-2 col-md-2"></div>
             <div class="col-lg-8 col-md-8 col-sm-12">
+              <!-- Add Business Form Sarts -->
               <form method="POST" action="AddBusinessAction.php">
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                       <div class="form-label-group">
-                        <input type="text" id="businessname" class="form-control" placeholder="business name" name="name" required="required" autofocus="autofocus">
+                        <input type="text" id="businessname" class="form-control" placeholder="business name" name="b_name" required="required" autofocus="autofocus">
                         <label for="businessname"><i class="fas fa-user-tie"></i> Buisness Name</label>
                       </div>
                     </div>
@@ -151,7 +152,7 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="number" id="bcontact" class="form-control" placeholder="name" name="contact" required="required" autofocus="autofocus">
+                          <input type="number" id="bcontact" class="form-control" placeholder="name" name="b_contact" required="required" autofocus="autofocus">
                           <label for="bcontact"><i class="fas fa-phone"></i> Business Contact</label>
                          </div>
                       </div>
@@ -159,8 +160,8 @@
                   <div class="col-lg-6 col-md-4 col-sm-12">
                     <div class="form-group">
                       <div class="form-label-group">
-                        <input type="file" id="name" class="form-control" placeholder="name" name="image" required="required" autofocus="autofocus">
-                        <label for="image"><i class="fas fa-images"></i> Image</label>
+                        <input type="file" id="Image" class="form-control" placeholder="Image" name="image" required="required" autofocus="autofocus">
+                        <label for="Image"><i class="fas fa-images"></i> Image</label>
                         </div>
                     </div>
                   </div>
@@ -169,6 +170,7 @@
                   </div>`
                 </div>
               </form>
+              <!-- Add Buisness Close -->
             </div>
             <div class="col-lg-3 col-md-4 col-sm-12"></div>
           </div>
