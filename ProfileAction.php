@@ -13,7 +13,7 @@ if(isset($_POST['Profile']))
 	// 	$userType = 'Admin';
 	// else
 	// 	$userType='dummy';
-	$insert = mysqli_query($con, "INSERT INTO `profile`(Name, Contact, Email, Password) VALUES('$Name', '$contact', '$email', '$password')");
+	$insert = mysqli_query($con, "INSERT INTO `users`(Name, Contact, Email, Password) VALUES('$Name', '$contact', '$email', '$password')");
 	if($insert)
 	{
 		$_SESSION['msg'] = 'Sign Up Successfully';

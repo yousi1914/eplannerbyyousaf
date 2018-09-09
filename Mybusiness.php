@@ -86,11 +86,12 @@
                 <th>City</th>
                 <th>Area</th>
                 <th>Location</th>
+                <th>Business Contact</th>
+                <th>Booking Fees</th>
+                <th>Owner Id</th>
                 <th>Open days</th>
-                <th>Services</th>
-                <th>Booking Charges</th>
-                <th>Booking Contact</th>
-                
+                <th>Business Status</th>
+                <th>Paid</th>
               </tr>
             </thead>
             <tbody>

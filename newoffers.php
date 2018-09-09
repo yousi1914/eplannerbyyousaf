@@ -99,31 +99,23 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                       <div class="form-label-group">
-                        <input type="text" id="businessname" class="form-control" placeholder="business name" name="business" required="required" autofocus="autofocus">
-                        <label for="businessname"><i class="fas fa-university"></i> Select Buisness</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input type="text" id="offer" class="form-control" placeholder="offer" name="o_name" required="required" autofocus="autofocus">
-                        <label for="offer"><i class="fas fa-user-tie"></i> Offer Name </label>
+                        <input type="text" id="oname" class="form-control" placeholder="offer" name="oname" required="required" autofocus="autofocus">
+                        <label for="oname"><i class="fas fa-user-tie"></i> Offer Name </label>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="discount" class="form-control" placeholder="Area" name="discount" required="required" autofocus="autofocus">
-                          <label for="discount"><i class="fas fa-map-marker-alt"></i> % off</label>
+                          <input type="text" id="description" class="form-control" placeholder="description" name="description" required="required" autofocus="autofocus">
+                          <label for="description"><i class="fas fa-map-marker-alt"></i>Description</label>
                          </div>
                       </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="date" id="startdate" class="form-control" placeholder="Start date" name="s_date" required="required" autofocus="autofocus">
+                          <input type="date" id="startdate" class="form-control" placeholder="Start date" name="sdate" required="required" autofocus="autofocus">
                           <label for="startdate"><i class="far fa-calendar"></i> Starting Date</label>
                          </div>
                       </div>
@@ -131,7 +123,7 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="date" id="enddate" class="form-control" placeholder="End date" name="e_date" required="required" autofocus="autofocus">
+                          <input type="date" id="enddate" class="form-control" placeholder="End date" name="edate" required="required" autofocus="autofocus">
                           <label for="enddate"><i class="far fa-calendar"></i> End date</label>
                          </div>
                       </div>
@@ -139,8 +131,16 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="description" class="form-control" placeholder="services" name="description" required="required" autofocus="autofocus">
-                          <label for="description"><i class="fab fa-sellcast"></i> Description</label>
+                          <input type="number" id="Bid" class="form-control" placeholder="bid" name="bid" required="required" autofocus="autofocus">
+                          <label for="Bid"><i class="fab fa-sellcast"></i> Business Id</label>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="form-label-group">
+                          <input type="text" id="pOff" class="form-control" placeholder="pOff" name="poff" required="required" autofocus="autofocus">
+                          <label for="pOff"><i class="fab fa-sellcast"></i> Payment Offer</label>
                          </div>
                       </div>
                   </div>

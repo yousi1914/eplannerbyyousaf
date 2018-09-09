@@ -53,7 +53,7 @@
             <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
           </form>
           <div class="text-center">
-            <a class="d-block small mt-3" href="signup.html">Register an Account</a>
+            <a class="d-block small mt-3" href="signup.php">Register an Account</a>
             <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
           </div>
         </div>

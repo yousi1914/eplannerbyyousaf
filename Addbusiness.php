@@ -120,7 +120,7 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="location" class="form-control" placeholder="Location" name="location" required="required" autofocus="autofocus">
+                          <input type="text" id="location" class="form-control" placeholder="Location" name="blocation" required="required" autofocus="autofocus">
                           <label for="location"><i class="fas fa-location-arrow"></i> Location</label>
                          </div>
                       </div>
@@ -128,7 +128,31 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="opendays" class="form-control" placeholder="opendays" name="opendays" required="required" autofocus="autofocus">
+                          <input type="number" id="bcontact" class="form-control" placeholder="name" name="bcontact" required="required" autofocus="autofocus">
+                          <label for="bcontact"><i class="fas fa-phone"></i> Business Contact</label>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <div class="form-label-group">
+                            <input type="text" id="bookingcharges" class="form-control" placeholder="bookingcharges" name="bookingFees" required="required" autofocus="autofocus">
+                            <label for="bookingcharges"><i class="fas fa-money-check-alt"></i> Booking Fees</label>
+                           </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <div class="form-label-group">
+                            <input type="text" id="ownerid" class="form-control" placeholder="ownerid" name="ownerId" required="required" autofocus="autofocus">
+                            <label for="ownerid"><i class="fas fa-money-check-alt"></i> Owner Id</label>
+                           </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="form-label-group">
+                          <input type="text" id="opendays" class="form-control" placeholder="opendays" name="openDays" required="required" autofocus="autofocus">
                           <label for="opendays"><i class="far fa-calendar"></i> Open Days</label>
                          </div>
                       </div>
@@ -136,32 +160,16 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="services" class="form-control" placeholder="services" name="services" required="required" autofocus="autofocus">
-                          <label for="services"><i class="fab fa-sellcast"></i> Services</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                          <div class="form-label-group">
-                            <input type="text" id="bookingcharges" class="form-control" placeholder="bookingcharges" name="bookingcharges" required="required" autofocus="autofocus">
-                            <label for="bookingcharges"><i class="fas fa-money-check-alt"></i> Booking Charges</label>
-                           </div>
-                        </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="number" id="bcontact" class="form-control" placeholder="name" name="b_contact" required="required" autofocus="autofocus">
-                          <label for="bcontact"><i class="fas fa-phone"></i> Business Contact</label>
+                          <input type="text" id="bstatus" class="form-control" placeholder="services" name="bstatus" required="required" autofocus="autofocus">
+                          <label for="bstatus"><i class="fab fa-sellcast"></i> Business Status</label>
                          </div>
                       </div>
                   </div>
                   <div class="col-lg-6 col-md-4 col-sm-12">
                     <div class="form-group">
                       <div class="form-label-group">
-                        <input type="file" id="Image" class="form-control" placeholder="Image" name="image" required="required" autofocus="autofocus">
-                        <label for="Image"><i class="fas fa-images"></i> Image</label>
+                        <input type="text" id="paid" class="form-control" placeholder="paid" name="Paid" required="required" autofocus="autofocus">
+                        <label for="paid"><i class="fas fa-images"></i> Paid</label>
                         </div>
                     </div>
                   </div>

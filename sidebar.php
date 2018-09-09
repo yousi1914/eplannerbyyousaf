@@ -6,7 +6,7 @@
       <!-- forr admin -->
       <ul class="sidebar navbar-nav">
 
-        <?php   if($_SESSION['user']['Type']=='Admin'){ ?>
+        <?php   if($_SESSION['user']['userType']=='For Admin'){ ?>
         <li class="nav-item active">
           <a class="nav-link" href="dashboard.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -40,7 +40,7 @@
 
 
 
-        <?php   if($_SESSION['user']['Type']=='Business'){ ?>
+        <?php   if($_SESSION['user']['userType']=='For Business'){ ?>
                    
         <li class="nav-item">
           <a class="nav-link" href="profile.php">
@@ -89,7 +89,7 @@
         <?php } ?>  
         <!-- for user  -->
 
-        <?php   if($_SESSION['user']['Type']=='User'){ ?>
+        <?php   if($_SESSION['user']['userType']=='For User'){ ?>
         <li class="nav-item">
           <a class="nav-link" href="profile.php">
             <i class="fas fa-fw fa-chart-area"></i>

@@ -15,7 +15,7 @@ if(isset($_POST['login']))
 	else
 	{
 		echo $_SESSION['msg'] = 'Invalid Login Cardentials';
-		header("location:login.html");
+		header("location:login.php");
 	}
 }
 ?>

@@ -1,24 +1,21 @@
 <?php
-$con=mysqli_connect("localhost", "root", "", "eplanner");
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-$result = mysqli_query($con, "SELECT * FROM addbusiness");
+include 'conn.php';
+$result = mysqli_query($con, "SELECT * FROM business");
 
     while($row = mysqli_fetch_array($result))
    		{
 
             echo "<tr>";
-            echo "<td>" . $row['b_name'] . "</td>";
-            echo "<td>" . $row['City'] . "</td>";
-          	echo "<td>" . $row['Area'] . "</td>";
-            echo "<td>" . $row['Location'] . "</td>";
-            echo "<td>" . $row['o_days'] . "</td>";
-            echo "<td>" . $row['Services'] . "</td>";
-            echo "<td>" . $row['b_charges'] . "</td>";
-            echo "<td>" . $row['b_contact'] . "</td>";
+            echo "<td>" . $row['bname'] . "</td>";
+            echo "<td>" . $row['bcity'] . "</td>";
+          	echo "<td>" . $row['barea'] . "</td>";
+            echo "<td>" . $row['blocation'] . "</td>";
+            echo "<td>" . $row['bcontact'] . "</td>";
+            echo "<td>" . $row['bookingFee'] . "</td>";
+            echo "<td>" . $row['ownerId'] . "</td>";
+            echo "<td>" . $row['openDays'] . "</td>";
+            echo "<td>" . $row['bstatus'] . "</td>";
+            echo "<td>" . $row['Paid'] . "</td>";
             echo "</tr>";
         }
 

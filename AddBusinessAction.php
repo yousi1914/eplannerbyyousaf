@@ -5,15 +5,14 @@ if(isset($_POST['business']))
 	$name = $_POST['b_name'];
 	$city = $_POST['city'];
 	$area = $_POST['area'];
-	$location = $_POST['location'];
-	$opendays = $_POST['opendays'];
-	$services = $_POST['services'];
-	$bookingcharges = $_POST['bookingcharges'];
-	$bookingcontact = $_POST['b_contact'];
-	$image = $_POST['image'];
-	$insert = mysqli_query($con, "INSERT INTO `addbusiness`(b_name , City, Area , Location , o_days, Services ,
-		b_charges,b_contact,Image) VALUES('$name', '$city', '$area', '$location' ,'$opendays', '$services', '$bookingcharges', 
-		'$bookingcontact','$image')");
+	$blocation = $_POST['blocation'];
+	$bcontact = $_POST['bcontact'];
+	$bookingFee = $_POST['bookingFee'];
+	$ownerId = $_POST['ownerId'];
+	$openDays = $_POST['openDays'];
+	$bstatus= $_POST['bstatus'];
+	$Paid = $_POST['Paid'];
+	$insert = mysqli_query($con, "INSERT INTO `business`(bname , bcity, barea,blocation,bcontact , bookingFee , ownerId,openDays,bstatus,Paid) VALUES('$name', '$city', '$area', '$blocation','$bcontact','$bookingFee','$ownerId','$openDays','$bstatus','$Paid')");
 	if($insert)
 	{
 		$_SESSION['msg'] = 'Data Insert Successfully';
