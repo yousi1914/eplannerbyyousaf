@@ -1,9 +1,4 @@
-<?php    session_start(); 
-if(empty($_SESSION['user'])){ ?>
-<script type="text/javascript">
-  window.location= "login.php";
-</script>
-<?php}?>
+<?php    session_start(); ?>
 
   <!-- For Header  -->
   <?php include 'header.php' ?>
