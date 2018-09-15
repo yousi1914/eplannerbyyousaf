@@ -22,7 +22,7 @@ if(isset($_POST['Profile']))
 	else
 	{
 		$_SESSION['msg'] = 'Error in Sign Up due to reason > '.mysqli_error($con);
-		header("location:profile.php");
+		header("location:myprofile.php");
 	}
 
 }

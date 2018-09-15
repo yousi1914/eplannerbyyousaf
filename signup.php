@@ -30,7 +30,7 @@
         <div class="card-header" style="text-align: center;">Register an Account</div>
         <div class="card-body">
           <form method="POST" action="SignupAction.php">
-             <div class="form-group">
+            <div class="form-group">
               <div class="form-label-group">
                 <select class="form-control" name="userType" id="sel1">
                   <option>**Select Type**</option>
@@ -38,7 +38,6 @@
                   <option>For User</option>
                   <option>For Business</option>
                 </select>
-                
               </div>
             </div>
             <div class="form-group">

@@ -1,3 +1,10 @@
+<?php @session_start();
+if(empty($_SESSION['user'])){ ?>
+<script type="text/javascript">
+
+    window.location = "login.php";
+</script>
+<?php } ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,13 +70,13 @@
         </li>
   
         <li class="nav-item dropdown no-arrow">
-          <a class="nav-link dropdown-toggle" href="login.html" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="login.php" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
    
             <div class="dropdown-divider"></div>
-            <button class="dropdown-item"  data-toggle="modal" data-target="#logoutModal">Logout</button>
+            <button class="dropdown-item"  data-toggle="modal" data-target="#logoutModal" href="login.php">Logout</button>
           </div>
         </li>
       </ul>

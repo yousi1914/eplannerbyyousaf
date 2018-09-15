@@ -1,16 +1,23 @@
-<?php session_start(); ?>
+<?php    session_start(); ?>
 
-<!-- For Header  -->
+  <!-- For Header  -->
   <?php include 'header.php' ?>
-    <!-- Side Bar  -->
+
+    <!-- for  sidebar 0 -->
+
     <?php include'sidebar.php' ?>
-    <!-- Body -->
     <div id="content-wrapper">
       <div class="container">
-        <!-- Breadcrumb calling from other php file -->
+    <!-- Body  -->
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
           <?php include'breadcrumb.php'?>
-          <!-- BRead Crumb closing -->
-          <!-- Body main -->
+
+          <!-- Profile Form-->
           <div class="card card-login mx-auto mt-5">
             <div class="card-body">
               <form method="POST" action="ProfileAction.php">
@@ -44,11 +51,21 @@
               </form>
             </div>
           </div>
-    </div>
-      <!-- /.content-wrapper -->
 
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright ©  assort tech Your Website 2018</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+      
     </div>
-    <!-- /#wrapper -->
+     <!--/#wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -68,7 +85,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="login.php">Logout</a>
           </div>
         </div>
       </div>
@@ -92,13 +109,6 @@
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   </body>
 

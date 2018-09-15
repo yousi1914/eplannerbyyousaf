@@ -1,13 +1,24 @@
-<?php session_start(); ?>
+<?php    session_start(); ?>
 
-<!-- For Header  -->
+  <!-- For Header  -->
   <?php include 'header.php' ?>
-	<!-- Sidebar -->
-      <?php include'sidebar.php' ?>
+
+    <!-- for  sidebar 0 -->
+
+    <?php include'sidebar.php' ?>
+    <div id="content-wrapper">
+      <div class="container">
+    <!-- Body  -->
 
       <div id="content-wrapper">
-        <div class="container">
-          <table class="table table-hover table-bordered">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <?php include'breadcrumb.php'?>
+
+          <!-- My Business Form-->
+           <table class="table table-hover table-bordered">
             <thead>
               <tr>
                 <th>Buisness Name</th>
@@ -30,11 +41,22 @@
             </tbody>
             
           </table>
-        </div>
+          
+
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright ©  assort tech Your Website 2018</span>
+            </div>
+          </div>
+        </footer>
+
       </div>
-      <!-- /.content-wrapper -->
+      
     </div>
-    <!-- /#wrapper -->
+     <!--/#wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -78,13 +100,6 @@
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   </body>
 

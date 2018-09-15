@@ -1,4 +1,4 @@
-<?php    session_start(); ?>
+
 
   <!-- For Header  -->
   <?php include 'header.php' ?>
@@ -101,9 +101,9 @@
         </footer>
 
       </div>
-      <!-- /.content-wrapper --
+      
     </div>
-    <!-- /#wrapper -->
+     <!--/#wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

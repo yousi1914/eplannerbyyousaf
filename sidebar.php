@@ -14,7 +14,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="profile.php">
+          <a class="nav-link" href="myprofile.php">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>My Profile </span></a>
         </li>
@@ -43,7 +43,7 @@
         <?php   if($_SESSION['user']['userType']=='For Business'){ ?>
                    
         <li class="nav-item">
-          <a class="nav-link" href="profile.php">
+          <a class="nav-link" href="myprofile.php">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>My Profile </span></a>
         </li>
@@ -91,7 +91,7 @@
 
         <?php   if($_SESSION['user']['userType']=='For User'){ ?>
         <li class="nav-item">
-          <a class="nav-link" href="profile.php">
+          <a class="nav-link" href="myprofile.php">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>My Profile </span></a>
         </li>
