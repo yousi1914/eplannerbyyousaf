@@ -35,7 +35,7 @@
           </a>
         </li>
          <?php } ?>  
-        <!-- for business ower 
+        <!-- for business owner 
          -->
 
 
@@ -44,7 +44,7 @@
                    
         <li class="nav-item">
           <a class="nav-link" href="myprofile.php">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-user"></i>
             <span>My Profile </span></a>
         </li>
         <li class="nav-item">

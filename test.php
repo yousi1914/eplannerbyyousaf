@@ -1,41 +1,131 @@
-<?php 
-session_start();
-if(isset($_POST['addBusiness']))
-{
-	include 'conn.php';
-	echo $uid = $_SESSION['user']['id'];
-	echo $bname = $_POST['bname'];
-	echo $bcity = $_POST['bcity'];
-	echo $barea = $_POST['barea'];
-	echo $blocation = $_POST['blocation'];
-	echo $bookingFee = $_POST['bookingFee'];
-	echo $bcontact = $_POST['bcontact'];
-	echo $opdays = mysql_real_escape_string($_POST['opdays']);
-	$insert1 = mysqli_query($con, "INSERT INTO `business`(bname, bcity, barea, blocation, bcontact, bookingFee, ownerId, openDays) VALUES('$bname','$bcity', '$barea', '$blocation', '$bcontact', '$bookingFee', '$uid', '$opdays')");
-	$bid = mysqli_insert_id($con);
-	// inserting services
-	if($insert1){
-		foreach($_POST['services'] as $service){
-		$insert2 = mysqli_query($con, "INSERT INTO `services`(sname, bid) VALUES('$service', '$bid')");
-	}
+<?php include 'header.php'; ?>
+<style type="text/css">
+    .fa {
+        line-height: 2;
+    }
+</style>
+        <div class="page-container">
+            
+            <?php include 'sidebar.php'; ?>
 
-	// uploading images and inserting into db.
+            <div class="page-content">
+                
+                <?php include 'navbar.php'; ?>
+                  
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>                    
+                    <li class="active">Dashboard</li>
+                </ul>
+                
+                <div class="page-content-wrap">
+                   
+                 <div class="row">
+                        <div class="col-md-12">
+                            
+                            <form class="form-horizontal" method="post" action="../offer.php" enctype="multipart/form-data">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Create an<strong> OFFER</strong></h3>
+                                    <ul class="panel-controls">
+                                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                    </ul>
+                                </div>
+    
+                                <div class="panel-body"> 
+        <?php include '../conn.php';
+    if(!empty($_SESSION['msg'])){
+     ?>
+        <div class="alert alert-success" id="msg">
+            <p><?php echo $_SESSION['msg'];
+            unset($_SESSION['msg']); ?></p>
+        </div>
+        <?php } ?>
 
-	foreach($_FILES['bimages']['name'] as $key=>$name){
-		if(move_uploaded_file($_FILES['bimages']['tmp_name'][$key], "images/business/".$_FILES['bimages']['name'][$key]))
-			{
-				$iname = $_FILES['bimages']['name'][$key];
-				$ins = mysqli_query($con, "INSERT INTO `images`(iname, bid) VALUES('$iname', '$bid')");
-				
-			}
-	}
-	$noti = 'New Business for '.$bname.' is Added. Waiting for Approval';
-	$qn = mysqli_query($con, "INSERT INTO `notifications`(type, description, uid) VALUES('admin', '$noti', '$uid')");
-$_SESSION['msg'] = 'Business Added Successfully';
-	header("location:Dashboard/addBusiness.php");
-	}
-	else
-		die(mysqli_error($con));
-	
-}
-?>
+        <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Select a Business</label>
+                                        <div class="col-md-6 col-xs-12">            
+                                            <select class="form-control select" name="bid">
+    <?php
+    $uid = $_SESSION['user']['id'];
+     $b = mysqli_query($con, "SELECT * FROM `business` WHERE ownerId='$uid'");
+     while($ores = mysqli_fetch_assoc($b)){
+      ?>
+                                                <option value="<?php echo $ores['id'] ?>">
+                                                    <?php echo $ores['bname'] ?>
+                                                </option>
+                                           <?php } ?>     
+                                            </select>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Offer Name</label>
+                                        <div class="col-md-6 col-xs-12"> 
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                <input type="text" class="form-control" name="oname" />
+                                            </div>          
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">% OFF</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-spinner fa-spin"></span></span>
+                                                <input type="number" class="form-control" name="poff" />
+                                            </div>            
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">Start Date</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="text" class="form-control datepicker" value="2014-11-01" name="sdate">        
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">                                        
+                                        <label class="col-md-3 col-xs-12 control-label">End Date</label>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                                <input type="text" class="form-control datepicker" value="2014-11-01" name="edate">        
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                     <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">Description</label>
+                                        <div class="col-md-6 col-xs-12">    
+                                            <textarea class="form-control" rows="5" name="odesc"></textarea>
+                                            
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="panel-footer">
+                                    <!--button class="btn btn-default">Clear Form</button-->                                    
+                                    <button class="btn btn-primary pull-right" type="submit" name="offer">Create Offer</button>
+                                </div>
+                            </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+
+                </div>                                
+            </div>            
+        </div>
+
+<?php include 'footer.php'; ?>
+<script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>                
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/plugins/tagsinput/jquery.tagsinput.min.js"></script>

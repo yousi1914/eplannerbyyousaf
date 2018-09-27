@@ -26,16 +26,33 @@
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
+                      <select class="form-control select" name="bid">
+                        <?php
+                        include "conn.php";
+                        $uid = $_SESSION['user']['id'];
+                         $b = mysqli_query($con, "SELECT * FROM `business` WHERE ownerId='$uid'");
+                         while($ores = mysqli_fetch_assoc($b)){
+                          ?>
+                          <option value="<?php echo $ores['id'] ?>">
+                            <?php echo $ores['bname'] ?>
+                          </option>
+                            <?php } ?>     
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
                       <div class="form-label-group">
                         <input type="text" id="oname" class="form-control" placeholder="offer" name="oname" required="required" autofocus="autofocus">
                         <label for="oname"><i class="fas fa-user-tie"></i> Offer Name </label>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="text" id="description" class="form-control" placeholder="description" name="description" required="required" autofocus="autofocus">
+                          <input type="text" id="description" class="form-control" placeholder="description" name="odesc" required="required" autofocus="autofocus">
                           <label for="description"><i class="fas fa-map-marker-alt"></i>Description</label>
                          </div>
                       </div>
@@ -59,16 +76,8 @@
                   <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="form-group">
                         <div class="form-label-group">
-                          <input type="number" id="Bid" class="form-control" placeholder="bid" name="bid" required="required" autofocus="autofocus">
-                          <label for="Bid"><i class="fab fa-sellcast"></i> Business Id</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
                           <input type="text" id="pOff" class="form-control" placeholder="pOff" name="poff" required="required" autofocus="autofocus">
-                          <label for="pOff"><i class="fab fa-sellcast"></i> Payment Offer</label>
+                          <label for="pOff"><i class="fab fa-sellcast"></i> Percent Off</label>
                          </div>
                       </div>
                   </div>

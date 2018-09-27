@@ -19,114 +19,88 @@
 
           <!-- Add Business Form-->
            <div class="row">
-            <div class="col-lg-2 col-md-2"></div>
-            <div class="col-lg-8 col-md-8 col-sm-12">
-              <!-- Add Business Form Sarts -->
-              <form method="POST" action="AddBusinessAction.php">
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input type="text" id="businessname" class="form-control" placeholder="business name" name="b_name" required="required" autofocus="autofocus">
-                        <label for="businessname"><i class="fas fa-user-tie"></i> Buisness Name</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input type="text" id="city" class="form-control" placeholder="City" name="city" required="required" autofocus="autofocus">
-                        <label for="city"><i class="fas fa-university"></i> City </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="text" id="area" class="form-control" placeholder="Area" name="area" required="required" autofocus="autofocus">
-                          <label for="area"><i class="fas fa-map-marker-alt"></i> Area</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="text" id="location" class="form-control" placeholder="Location" name="blocation" required="required" autofocus="autofocus">
-                          <label for="location"><i class="fas fa-location-arrow"></i> Location</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="number" id="bcontact" class="form-control" placeholder="name" name="bcontact" required="required" autofocus="autofocus">
-                          <label for="bcontact"><i class="fas fa-phone"></i> Business Contact</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                          <div class="form-label-group">
-                            <input type="text" id="bookingcharges" class="form-control" placeholder="bookingcharges" name="bookingFees" required="required" autofocus="autofocus">
-                            <label for="bookingcharges"><i class="fas fa-money-check-alt"></i> Booking Fees</label>
-                           </div>
-                        </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <select class="form-control" name="services[]" id="sel1">
-                          <option>**Services**</option>
-                          <option>Party</option>
-                          <option>Marriage </option>
-                          <option>Seminar</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="text" id="opendays" class="form-control" placeholder="opendays" name="openDays" required="required" autofocus="autofocus">
-                          <label for="opendays"><i class="far fa-calendar"></i> Open Days</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
-                      <div class="form-group">
-                        <div class="form-label-group">
-                          <input type="text" id="bstatus" class="form-control" placeholder="services" name="bstatus" required="required" autofocus="autofocus">
-                          <label for="bstatus"><i class="fab fa-sellcast"></i> Business Status</label>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6 col-md-4 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input type="text" id="paid" class="form-control" placeholder="paid" name="Paid" required="required" autofocus="autofocus">
-                        <label for="paid"><i class="fas fa-images"></i> Paid</label>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-4 col-sm-12">
-                    <div class="form-group">
-                      <div class="form-label-group">
-                        <input type="file" id="paid" class="form-control" placeholder="paid" name="bimages[]" multiple="" required="required" autofocus="autofocus">
-                        <label for="paid"><i class="fas fa-images"></i> Business Images</label>
-                        </div>
-                    </div>
-                  </div>
-                  
-                  <div class="col-lg-6 col-md-4 col-sm-12">
-                    <button type="submit" name="business" class="btn btn-primary btn-lg">Submit
-                    </button>
-                  </div>`
+            <div class="col-xl-3 col-md-3"></div>
+             <div class="col-xl-6 col-md-6">
+
+                <div class="card card-login mx-auto mt-5">
+                <div class="card-header">Add Business</div>
+                <div class="card-body">
+          <form method="post" action="AddBusinessAction.php" enctype="multipart/form-data">
+                <div class="form-group">
+                <div class="form-label-group">
+                    <input type="text" id="inputName" class="form-control" placeholder="Name"  name="bname" required="required" autofocus="autofocus">
+                    <label for="inputName"> Business Name</label>
                 </div>
-              </form>
-              <!-- Add Buisness Close -->
+                </div>
+            <div class="form-group">
+            <div class="form-label-group">
+                    <input type="text" id="inputCity" class="form-control" placeholder="City" name="bcity" required="required" autofocus="autofocus">
+                    <label for="inputCity"> City</label>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-12"></div>
-          </div>
+            </div>
+            <div class="form-group">
+            <div class="form-label-group">
+                    <input type="text" id="inputArea" class="form-control" placeholder="Area" required="required" name="barea" autofocus="autofocus">
+                    <label for="inputArea">Area</label>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="text" id="inputLoction" class="form-control" placeholder="Location" required="required" name="blocation" autofocus="autofocus">
+                    <label for="inputLocation"> Location</label>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="number" id="inputContact" class="form-control" placeholder="Business Contact" required="required" name="bcontact" autofocus="autofocus">
+                    <label for="inputContact">Business Contact</label>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-label-group">
+                    <input type="number" id="inputCharges" class="form-control" placeholder="Booking Charges" required="required"  name="bookingFee" autofocus="autofocus">
+                    <label for="inputCharges">Booking Fee</label>
+                  </div>
+                  </div>
+                   <div class="form-group">  
+                   <div class="form-label-group">              
+                   <select class="form-control" name="opdays">
+                        <option value="" disabled selected>Open Days</option>
+                        <option>24/7</option>
+                        <option>Saturday OFF</option>
+                        <option>Sunday OFF</option>
+                        <option>Saturday Sunday OFF</option>
+                    </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-label-group">          
+                      <select multiple="true" class="form-control select" name="services[]">
+                          <option value="" disabled selected>Services</option>
+                          <option>Marriage</option>
+                          <option>Party</option>
+                          <option>Political Meeting</option>
+                          <option>Seminars</option>
+                          <option>Sports</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+
+                  
+                 <div class="form-group">
+                  <div class="control-label"> 
+                     <input type="file" class="fileinput btn-primary" name="bimages[]" id="filename" title="Browse file" multiple="" />
+                  </div> 
+                </div>
+                  <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
+                  
+          </form>
+         </div>
+      </div>
+      </div>
+      <div class="col-xl-3 col-md-3"></div>
+      </div>
           
 
 
